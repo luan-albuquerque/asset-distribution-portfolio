@@ -6,7 +6,7 @@ from api_tesouro import get_tesouro
 # =============================
 
 COTACOES = {
-    "ITSA4": 0,
+    "ITSA3": 0,
     "TAEE11": 0,
     "BBAS3": 0,
     "SAPR4": 0,
@@ -19,7 +19,7 @@ COTACOES = {
 }
 
 ACOES_VALORES = {
-    "ITSA4": 0,
+    "ITSA3": 0,
     "TAEE11": 0,
     "BBAS3": 0,
     "SAPR4": 0,

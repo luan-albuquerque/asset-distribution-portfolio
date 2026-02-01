@@ -16,7 +16,7 @@ APORTE_TOTAL = 3000
 # ALVOS (%)
 # =============================
 ACOES_ALVO = {
-    "ITSA4": 0.03,
+    "ITSA3": 0.03,
     "TAEE11": 0.039,
     "BBAS3": 0.039,
     "SAPR4": 0.036,
@@ -122,6 +122,7 @@ df_rf["Valor Final"] = df_rf["Valor Atual"] + df_rf["Aporte Ajustado"]
 df_total = pd.concat([df_acoes, df_rf])
 
 novo_total_final = df_total["Valor Final"].sum()
+total_atual = df_total["Valor Atual"].sum()
 df_total["% Final"] = df_total["Valor Final"] / novo_total_final
 
 # =============================
@@ -172,4 +173,5 @@ print(f"Aporte total: R$ {APORTE_TOTAL:,.2f}")
 print(f"Investido em ações: R$ {df_acoes['Valor Usado'].sum():,.2f}")
 print(f"Investido em renda fixa: R$ {df_rf['Valor Usado'].sum():,.2f}")
 print(f"Sobra final de caixa: R$ {caixa:,.2f}")
+print(f"Carteira atual: R$ {total_atual:,.2f}")
 print(f"Carteira final: R$ {novo_total_final:,.2f}")
